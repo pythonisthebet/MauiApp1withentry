@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.labelinputentrythingy"
+             Title="labelinputentrythingy">
+    <VerticalStackLayout>
+        <Button
+            Text="change to reading mode"
+            x:Name="readswitch"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Clicked="OnButtonClicked1"
+            
+            >
+        </Button>
+
+        <Button
+            Text="Copy"
+            x:Name="copy"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Clicked="OnButtonClicked2"
+        >
+        </Button>
+
+        <Button
+    Text="lameCopy"
+    x:Name="lamecopy"
+    VerticalOptions="Center"
+    HorizontalOptions="Center"
+    Clicked="OnButtonClicked3"
+>
+        </Button>
+
+        <Entry
+            x:Name="entry"
+            Placeholder="enter numbers"
+            IsReadOnly="False"
+            TextChanged="OnEntryTextChanged"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Keyboard="Numeric"
+            >
+            
+
+        </Entry>
+
+        <Label
+         x:Name="lable"
+           Text="lame lable"
+            
+            >
+            
+            
+        </Label>
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
