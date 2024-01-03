@@ -1,3 +1,5 @@
+using System.Drawing;
+
 namespace MauiApp1;
 
 public partial class labelinputentrythingy : ContentPage
@@ -7,6 +9,9 @@ public partial class labelinputentrythingy : ContentPage
     Button lamecopy;
     Button readswitch;
     Entry entry;
+    public int red;
+    public int green;
+    public int blue;
 	public labelinputentrythingy()
 	{
 		InitializeComponent();
@@ -88,6 +93,19 @@ public partial class labelinputentrythingy : ContentPage
         lable.Text = myText;
 
     }
+
+    public void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
+    {
+        red = (int)slidered.Value;
+        blue = (int)slideblue.Value;
+        green = (int)slidegreen.Value;
+        
+        funcolors.Color  = Microsoft.Maui.Graphics.Color.FromRgb(red, blue, green);
+        funcolors.RotationX = (int)slidered.Value*3 + (int)slideblue.Value * 3 + (int)slidegreen.Value * 3;
+        funcolors.RotationY = (int)slidered.Value * 3 + (int)slideblue.Value * 3 + (int)slidegreen.Value * 3;
+    }
+
+
 
 
 }

@@ -53,8 +53,47 @@
             
             
         </Label>-->
+        <Slider
+            x:Name="slidered"
+            Minimum="0"
+            Maximum="255"
+            Value="0"
+            ValueChanged="OnSliderValueChanged"
+            
+            >
+        </Slider>
+        
+        <Slider
+    x:Name="slideblue"
+    Minimum="0"
+    Maximum="255"
+    Value="0"
+    ValueChanged="OnSliderValueChanged"
+    
+    >
+        </Slider>
+        
+        <Slider
+    x:Name="slidegreen"
+    Minimum="0"
+    Maximum="255"
+    Value="0"
+    ValueChanged="OnSliderValueChanged"
+    
+    >
+        </Slider>
 
-
+        <BoxView
+            x:Name="funcolors"
+            Color="Black"
+            CornerRadius="10"
+             WidthRequest="160"
+             HeightRequest="160"
+             VerticalOptions="Center"
+             HorizontalOptions="Center"
+            >
+            
+        </BoxView>
 
 
     </VerticalStackLayout>
