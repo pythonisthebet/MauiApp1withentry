@@ -3,12 +3,53 @@ namespace MauiApp1;
 public partial class labelinputentrythingy : ContentPage
 {
     public string myText = "";
+    Label lable;
+    Button lamecopy;
+    Button readswitch;
+    Entry entry;
 	public labelinputentrythingy()
 	{
 		InitializeComponent();
+        readswitch = new Button()
+        {
+            Text = "change to reading mode",
+            VerticalOptions = LayoutOptions.Center,
+            HorizontalOptions = LayoutOptions.Center,
+            //Clicked = "OnButtonClicked1"
+            
 
-		
-	}
+        };
+
+        lamecopy = new Button()
+        {
+            Text = "lameCopy",
+            VerticalOptions = LayoutOptions.Center,
+            HorizontalOptions = LayoutOptions.Center,
+            //click??????
+        };
+
+        entry = new Entry()
+        {
+            Placeholder = "enter numbers",
+            IsReadOnly = false,
+            VerticalOptions = LayoutOptions.Center,
+            HorizontalOptions = LayoutOptions.Center,
+            Keyboard = Keyboard.Numeric
+        };
+
+        lable = new Label()
+        {
+            Text = "Dynamic label"
+        };
+
+        lamecopy.Clicked += OnButtonClicked3;
+        readswitch.Clicked += OnButtonClicked1;
+        entry.TextChanged += OnEntryTextChanged;
+        myStack.Children.Add(readswitch);
+        myStack.Children.Add(lamecopy);
+        myStack.Children.Add(entry);
+        myStack.Children.Add(lable);
+    }
 
 
     public void OnEntryTextChanged(object sender, TextChangedEventArgs e)
